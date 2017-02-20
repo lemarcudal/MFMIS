@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ManilaFame</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_with_paragraphs">
+        Can this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errors
+        Can this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
+        Adding a 2nd line like this should work.
+        It should not cause parsing errors
+    </string>
+    <string name="citem_address">
+        Golden Shell Pavilion, ITC Complex,
+        Roxas Boulevard corner Sen. Gil J. Puyat Avenue,
+        Pasay City 1300, PHILIPPINES
+    </string>
+    <string name="about_p1">
+        Considered as the country\'s premier design and lifestyle event, Manila FAME is a bi-annual showcase of craftsmanship, design innovation, and artisanship in Philippine products. It features finely selected furniture and home furnishings, holiday gifts and décor, and fashion accessories designed and crafted in the Philippines for the global market.
+    </string>
+    <string name="about_p2">
+        Manila FAME is organized by the Philippine Department of Trade and Industry (DTI), through the Center for International Trade Expositions and Missions (CITEM). It is the second longest-running trade show in the Asia-Pacific, and is the only trade event in the country that is approved by Union des Foires Internationales (UFI), or the Global Association of the Exhibition Industry, a Paris-based association of trade fair organizers founded 90 years ago in Milan, Italy in April 1925.
+    </string>
+</resources>

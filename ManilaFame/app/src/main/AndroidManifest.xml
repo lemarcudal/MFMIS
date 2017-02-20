@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smdojt.manilafame">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+     Enable Internet Connection for Image retrieval in
+                                                                        Gallery Tab
+    -->
+    <!-- List of specific class declaration (Depending on usage) -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="MANILA FAME"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.smdojt.manilafame.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- DEFAULT Launching activity / Interface after Splashscreen -->
+            </intent-filter>
+        </activity>
+        <!--  -->
+        <activity
+            android:name=".SplashScreen"
+            android:label="MANILA FAME">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- LAUNCHING Activity -->
+            </intent-filter>
+        </activity>
+        <!-- -->
+        <activity
+            android:name=".sample1"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.smdojt.manilafame.MainActivity" />
+        </activity>
+        <!-- -->
+    </application>
+
+</manifest>
