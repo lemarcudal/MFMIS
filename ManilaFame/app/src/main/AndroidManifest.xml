@@ -37,7 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" /> <!-- LAUNCHING Activity -->
             </intent-filter>
         </activity>
-        <!-- -->
+        <!--  -->
         <activity
             android:name=".sample1"
             android:parentActivityName=".MainActivity">
@@ -45,7 +45,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.smdojt.manilafame.MainActivity" />
         </activity>
-        <!-- -->
+        <!--  -->
+        <activity android:name=".Gallery.GalleryActivity"></activity>
+        <activity android:name=".Gallery.DetailActivity"></activity>
     </application>
 
 </manifest>

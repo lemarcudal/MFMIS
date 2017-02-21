@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
+import com.example.smdojt.manilafame.Gallery.GalleryActivity;
+import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -147,8 +149,12 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_gallery)
         {
-            Intent intent = new Intent(getApplicationContext(), sample1.class);
-            startActivity(intent);
+            ListGalleryFragment fragment = new ListGalleryFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
+            fragmentTransaction.commit();
         }
         else if (id == R.id.nav_exhibitors)
         {
@@ -161,7 +167,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_Attendees)
         {
-
+            Intent intent = new Intent(getApplicationContext(), sample1.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_about)
         {
