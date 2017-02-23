@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smdojt.manilafame.R;
-import com.example.smdojt.manilafame.sample1;
+import com.example.smdojt.manilafame.Communication.about;
 
 import java.util.List;
 
@@ -74,7 +74,7 @@ public class TabInt_RV_Adapter extends RecyclerView.Adapter<TabInt_RV_Adapter.It
                 if (i == 0)
                 {
                     //Toast.makeText(context, "Index position is 0", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent (context, sample1.class);
+                    Intent intent = new Intent (context, about.class);
                     context.startActivity(intent);
 
 //                    Using this code specifically for activity will make backstack automatically generated:

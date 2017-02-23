@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="290dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic1_1"
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageView1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manila FAME: The Design and Lifestyle Event"
+            android:textSize="14dp"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:id="@+id/textView1" />
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/custom_mf_logo"
+            android:id="@+id/imageView2"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="420dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view1"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/about_p1"
+            android:textSize="12dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/view"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/about_p2"
+            android:textSize="12dp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/view1"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

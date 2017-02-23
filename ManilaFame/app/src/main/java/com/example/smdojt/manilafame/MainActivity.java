@@ -3,21 +3,18 @@ package com.example.smdojt.manilafame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.smdojt.manilafame.Communication.about;
+import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
-import com.example.smdojt.manilafame.Gallery.GalleryActivity;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -167,18 +164,18 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_Attendees)
         {
-            Intent intent = new Intent(getApplicationContext(), sample1.class);
-            startActivity(intent);
+
         }
         else if (id == R.id.nav_about)
         {
-
+            Intent intent = new Intent(getApplicationContext(), about.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_contact)
         {
-
+            Intent intent = new Intent(getApplicationContext(), contact.class);
+            startActivity(intent);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

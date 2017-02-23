@@ -39,15 +39,24 @@
         </activity>
         <!--  -->
         <activity
-            android:name=".sample1"
+            android:name=".Communication.about"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.smdojt.manilafame.MainActivity" />
         </activity>
         <!--  -->
-        <activity android:name=".Gallery.GalleryActivity"></activity>
-        <activity android:name=".Gallery.DetailActivity"></activity>
+        <activity
+            android:name=".Communication.contact"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.smdojt.manilafame.MainActivity" />
+        </activity>
+        <!--  -->
+        <activity android:name=".Gallery.GalleryActivity" />
+        <activity android:name=".Gallery.DetailActivity" />
+        <activity android:name=".ListAttendees.CustomList"></activity>
     </application>
 
 </manifest>
