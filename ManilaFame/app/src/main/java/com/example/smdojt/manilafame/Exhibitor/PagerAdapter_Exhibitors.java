@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.smdojt.manilafame.Exhibitor.Exhibitor_International.TabInternationalFragment;
+import com.example.smdojt.manilafame.Exhibitor.Exhibitor_Local.TabLocalFragment;
+
 /**
  * Created by smdojt on 2/21/2017.
  */

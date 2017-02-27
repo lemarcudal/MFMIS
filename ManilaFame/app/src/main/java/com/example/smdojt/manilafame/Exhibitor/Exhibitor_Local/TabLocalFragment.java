@@ -1,4 +1,4 @@
-package com.example.smdojt.manilafame.Exhibitor;
+package com.example.smdojt.manilafame.Exhibitor.Exhibitor_Local;
 
 
 import android.os.Bundle;

@@ -10,7 +10,7 @@ import android.text.style.TypefaceSpan;
  */
 
 //CLASS DECLARATION FOR NAVIGATION DRAWER FONT
-//Dont bother the error below.
+//Dont mind the error below.
 public class CustomTypefaceSpan extends TypefaceSpan {
 
     private final Typeface newType;

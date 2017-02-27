@@ -1,4 +1,4 @@
-package com.example.smdojt.manilafame.Exhibitor;
+package com.example.smdojt.manilafame.Exhibitor.Exhibitor_International;
 
 import android.content.Context;
 import android.content.Intent;

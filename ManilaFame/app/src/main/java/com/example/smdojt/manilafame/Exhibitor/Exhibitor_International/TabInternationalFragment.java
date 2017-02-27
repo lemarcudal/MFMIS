@@ -1,9 +1,7 @@
-package com.example.smdojt.manilafame.Exhibitor;
-
+package com.example.smdojt.manilafame.Exhibitor.Exhibitor_International;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -48,6 +46,10 @@ public class TabInternationalFragment extends Fragment {
         items.add(new Exhibitors_Int("A. GARCIA CRAFTS", "FURNITURE", R.drawable.image1));
         items.add(new Exhibitors_Int("BALEX BOXES", "HOLIDAY DECORATION", R.drawable.image2));
         items.add(new Exhibitors_Int("CAGAYAN DE ORO HANDMADE PAPER", "HOME DECOR/HOUSEWARE", R.drawable.image3));
+        items.add(new Exhibitors_Int("CV. BALI BAKTI ANGGARA", "FOREIGN", R.drawable.image1));
+        items.add(new Exhibitors_Int("CV. WITA HARA KIRANA", "FOREIGN", R.drawable.image1));
+        items.add(new Exhibitors_Int("LIA AFIF", "FOREIGN", R.drawable.image1));
+        items.add(new Exhibitors_Int("NAPUTO BALI", "FOREIGN", R.drawable.image1));
     }
 
     private void initializeAdapter()
