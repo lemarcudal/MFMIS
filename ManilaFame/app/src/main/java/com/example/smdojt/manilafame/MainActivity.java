@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.smdojt.manilafame.Attendees.AttendeesFragment;
 import com.example.smdojt.manilafame.Communication.about;
 import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
@@ -164,7 +165,12 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_Attendees)
         {
-
+            AttendeesFragment fragment = new AttendeesFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);//get back to the previous fragment
+            fragmentTransaction.commit();
         }
         else if (id == R.id.nav_about)
         {

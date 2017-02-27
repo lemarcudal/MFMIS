@@ -54,9 +54,9 @@
                 android:value="com.example.smdojt.manilafame.MainActivity" />
         </activity>
         <!--  -->
-        <activity android:name=".Gallery.GalleryActivity" />
+        <!--<activity android:name=".Gallery.GalleryActivity" />-->
         <activity android:name=".Gallery.DetailActivity" />
-        <activity android:name=".ListAttendees.CustomList"></activity>
+        <!--<activity android:name=".Attendees.CustomList"></activity>-->
     </application>
 
 </manifest>

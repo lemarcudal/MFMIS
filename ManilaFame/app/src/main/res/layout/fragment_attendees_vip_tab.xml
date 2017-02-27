@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.smdojt.manilafame.ListAttendees.ListAttendeesFragment">
+    tools:context="com.example.smdojt.manilafame.Attendees.TabAttendeesVIPFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

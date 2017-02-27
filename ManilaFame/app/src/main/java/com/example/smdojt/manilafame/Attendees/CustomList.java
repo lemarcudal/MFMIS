@@ -1,8 +1,6 @@
-package com.example.smdojt.manilafame.ListAttendees;
+package com.example.smdojt.manilafame.Attendees;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +17,7 @@ public class CustomList extends ArrayAdapter<String> {
     private final int[] imageId;
     public CustomList(Activity context,
                       String[] AllAttendess, int[] imageId) {
-        super(context, R.layout.fragment_list_attendees_tabs, AllAttendess);
+        super(context, R.layout.fragment_attendees_custom_list, AllAttendess);
         this.context = context;
         this.AllAttendees = AllAttendess;
         this.imageId = imageId;
@@ -28,7 +26,7 @@ public class CustomList extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View view, ViewGroup parent){
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.fragment_list_attendees_tabs, null, true);
+        View rowView = inflater.inflate(R.layout.fragment_attendees_custom_list, null, true);
         TextView txtName = (TextView) rowView.findViewById(R.id.txtName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
         txtName.setText(AllAttendees[position]);

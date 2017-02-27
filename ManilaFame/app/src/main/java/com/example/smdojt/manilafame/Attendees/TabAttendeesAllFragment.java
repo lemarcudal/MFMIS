@@ -1,4 +1,4 @@
-package com.example.smdojt.manilafame.ListAttendees;
+package com.example.smdojt.manilafame.Attendees;
 
 
 import android.content.Intent;
@@ -17,10 +17,10 @@ import com.example.smdojt.manilafame.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ListAttendeesFragment extends Fragment {
+public class TabAttendeesAllFragment extends Fragment {
 
 
-    public ListAttendeesFragment() {
+    public TabAttendeesAllFragment() {
         // Required empty public constructor
     }
     ListView list;
@@ -47,10 +47,10 @@ public class ListAttendeesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_list_attendees, container, false);
+        View v = inflater.inflate(R.layout.fragment_attendees_all_tab, container, false);
 
         CustomList adapter = new
-                CustomList(ListAttendeesFragment.this.getActivity(), AllAttendees, imageID);
+                CustomList(TabAttendeesAllFragment.this.getActivity(), AllAttendees, imageID);
         list = (ListView) v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
