@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <!-- <group android:checkableBehavior="single"> -->
+    <item android:title="Overview">
+        <menu>
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
+        <item
+            android:id="@+id/nav_exhibitors"
+            android:icon="@drawable/ic_local_atm_black_24dp"
+            android:title="Exhibitors" />
+        <item
+            android:id="@+id/nav_attendees"
+            android:icon="@drawable/ic_people_outline_black_24dp"
+            android:title="Attendees" />
+        <item
+            android:id="@+id/nav_sched"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Schedules" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
-        <item
-            android:id="@+id/nav_exhibitors"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Exhibitors" />
-        <item
-            android:id="@+id/nav_Attendees"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Attendees" />
-    </group>
+        </menu>
+    </item>
+    <!-- </group> -->
 
     <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_group_black_24dp"
                 android:title="About Us" />
             <item
                 android:id="@+id/nav_contact"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_contact_phone_black_24dp"
                 android:title="Contact Us" />
         </menu>
     </item>

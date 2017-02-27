@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/schedule_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.example.guitarista.citem.ScheduleFragment">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="440dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view" />
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="#f2e6ad"
+            android:layout_alignBottom="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginTop="72dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date and Time Today:"
+            android:textSize="14dp"
+            android:layout_marginTop="17dp"
+            android:id="@+id/textDate1"
+            android:layout_below="@+id/view"
+            android:layout_alignStart="@+id/calendarView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDate2"
+            android:textSize="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_below="@+id/textDate1"
+            android:layout_alignStart="@+id/calendarView"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

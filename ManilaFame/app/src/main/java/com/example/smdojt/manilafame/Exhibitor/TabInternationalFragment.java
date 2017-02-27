@@ -47,7 +47,7 @@ public class TabInternationalFragment extends Fragment {
         items = new ArrayList<>();
         items.add(new Exhibitors_Int("A. GARCIA CRAFTS", "FURNITURE", R.drawable.image1));
         items.add(new Exhibitors_Int("BALEX BOXES", "HOLIDAY DECORATION", R.drawable.image2));
-        items.add(new Exhibitors_Int("CAGAYAN DE ORO HANDMADE PAPER", "HOME DECOR//HOUSEWARE", R.drawable.image3));
+        items.add(new Exhibitors_Int("CAGAYAN DE ORO HANDMADE PAPER", "HOME DECOR/HOUSEWARE", R.drawable.image3));
     }
 
     private void initializeAdapter()

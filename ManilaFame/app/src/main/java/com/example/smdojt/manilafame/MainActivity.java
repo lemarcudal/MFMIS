@@ -1,6 +1,7 @@
 package com.example.smdojt.manilafame;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -9,10 +10,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.widget.Toast;
 
 import com.example.smdojt.manilafame.Attendees.AttendeesFragment;
+import com.example.smdojt.manilafame.Calendar.ScheduleFragment;
 import com.example.smdojt.manilafame.Communication.about;
 import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
@@ -59,6 +65,33 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //------Below are code declaration for setting font in Navigation Drawer
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu m = navigationView.getMenu();
+        for (int i=0;i<m.size();i++) {
+            MenuItem mi = m.getItem(i);
+
+            //for aapplying a font to subMenu ...
+            SubMenu subMenu = mi.getSubMenu();
+            if (subMenu!=null && subMenu.size() >0 ) {
+                for (int j=0; j <subMenu.size();j++) {
+                    MenuItem subMenuItem = subMenu.getItem(j);
+                    applyFontToMenuItem(subMenuItem);
+                }
+            }
+
+            //the method we have create in activity
+            applyFontToMenuItem(mi);
+        }
+    }
+
+    //set font to use for nav drawer
+    private void applyFontToMenuItem(MenuItem mi) {
+        Typeface font = Typeface.createFromAsset(getAssets(), "century_gothic_bold.ttf");
+        SpannableString mNewTitle = new SpannableString(mi.getTitle());
+        mNewTitle.setSpan(new CustomTypefaceSpan("" , font), 0 , mNewTitle.length(),  Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        mi.setTitle(mNewTitle);
     }
 
     //default back pressed
@@ -163,13 +196,22 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.addToBackStack(null);//get back to the previous fragment
             fragmentTransaction.commit();
         }
-        else if (id == R.id.nav_Attendees)
+        else if (id == R.id.nav_attendees)
         {
             AttendeesFragment fragment = new AttendeesFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);//get back to the previous fragment
+            fragmentTransaction.commit();
+        }
+        else if (id == R.id.nav_sched)
+        {
+            ScheduleFragment fragment = new ScheduleFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
         else if (id == R.id.nav_about)
