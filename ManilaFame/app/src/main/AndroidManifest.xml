@@ -2,12 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smdojt.manilafame">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Enable Internet Connection for Image retrieval in Gallery Tab -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <!--
-     Enable Internet Connection for Image retrieval in
-                                                                        Gallery Tab
-    -->
     <!-- List of specific class declaration (Depending on usage) -->
     <application
         android:allowBackup="true"
@@ -15,6 +12,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
         <activity
             android:name=".MainActivity"
             android:label="MANILA FAME"
@@ -54,9 +55,18 @@
                 android:value="com.example.smdojt.manilafame.MainActivity" />
         </activity>
         <!--  -->
-        <!--<activity android:name=".Gallery.GalleryActivity" />-->
+        <!-- <activity android:name=".Gallery.GalleryActivity" /> -->
         <activity android:name=".Gallery.DetailActivity" />
-        <!--<activity android:name=".Attendees.CustomList"></activity>-->
+        <!-- <activity android:name=".Attendees.CustomList"></activity> -->
+        <activity
+            android:name=".Registration_Scanner.QRScanner"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.smdojt.manilafame.MainActivity" />
+        </activity>
+        <activity android:name=".Registration_Scanner.QRActivity1" />
+        <activity android:name=".Exhibitor.Exhibitor_Local.TabLoc_CV_Activity"></activity>
     </application>
 
 </manifest>

@@ -23,6 +23,7 @@ import com.example.smdojt.manilafame.Communication.about;
 import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
+import com.example.smdojt.manilafame.Registration_Scanner.QRScanner;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -213,6 +214,11 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+        }
+        else if (id == R.id.nav_scanner)
+        {
+            Intent intent = new Intent(getApplicationContext(), QRScanner.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_about)
         {

@@ -27,7 +27,16 @@
         </menu>
     </item>
     <!-- </group> -->
-
+    <item android:title="Register">
+        <menu>
+            <item
+                android:id="@+id/nav_scanner"
+                android:icon="@drawable/ic_camera_alt_black_24dp"
+                android:title="Scan QR Code">
+            </item>
+        </menu>
+    </item>
+    <!-- </group> -->
     <item android:title="Communicate">
         <menu>
             <item
@@ -40,5 +49,5 @@
                 android:title="Contact Us" />
         </menu>
     </item>
-
+    <!-- </group> -->
 </menu>
