@@ -75,7 +75,14 @@ public class ListGalleryFragment extends Fragment {
                     fragmentTransaction.commit();
                 }
                 if (position == 1) {
-
+                    GalleryActivity fr = new GalleryActivity();
+                    Bundle args = new Bundle();
+                    fr.setArguments(args);
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container, fr);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
                 }
             }
         });

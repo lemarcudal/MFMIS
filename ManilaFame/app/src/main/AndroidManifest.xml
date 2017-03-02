@@ -57,7 +57,7 @@
         <!--  -->
         <!-- <activity android:name=".Gallery.GalleryActivity" /> -->
         <activity android:name=".Gallery.DetailActivity" />
-        <!-- <activity android:name=".Attendees.CustomList"></activity> -->
+        <!-- <activity android:name=".Attendees.CustomListAll"></activity> -->
         <activity
             android:name=".Registration_Scanner.QRScanner"
             android:parentActivityName=".MainActivity">
@@ -66,7 +66,8 @@
                 android:value="com.example.smdojt.manilafame.MainActivity" />
         </activity>
         <activity android:name=".Registration_Scanner.QRActivity1" />
-        <activity android:name=".Exhibitor.Exhibitor_Local.TabLoc_CV_Activity"></activity>
+        <activity android:name=".Exhibitor.Exhibitor_Local.TabLoc_CV_Activity" />
+        <activity android:name=".Attendees.CustomListVip"></activity>
     </application>
 
 </manifest>

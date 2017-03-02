@@ -49,8 +49,8 @@ public class TabAttendeesAllFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_attendees_all_tab, container, false);
 
-        CustomList adapter = new
-                CustomList(TabAttendeesAllFragment.this.getActivity(), AllAttendees, imageID);
+        CustomListAll adapter = new
+                CustomListAll(TabAttendeesAllFragment.this.getActivity(), AllAttendees, imageID);
         list = (ListView) v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

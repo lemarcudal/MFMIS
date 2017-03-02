@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 import com.example.smdojt.manilafame.R;
 
-public class CustomList extends ArrayAdapter<String> {
+public class CustomListAll extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] AllAttendees;
     private final int[] imageId;
-    public CustomList(Activity context,
-                      String[] AllAttendess, int[] imageId) {
-        super(context, R.layout.fragment_attendees_custom_list, AllAttendess);
+    public CustomListAll(Activity context,
+                         String[] AllAttendess, int[] imageId) {
+        super(context, R.layout.fragment_attendees_custom_list_all, AllAttendess);
         this.context = context;
         this.AllAttendees = AllAttendess;
         this.imageId = imageId;
@@ -26,7 +26,7 @@ public class CustomList extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View view, ViewGroup parent){
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.fragment_attendees_custom_list, null, true);
+        View rowView = inflater.inflate(R.layout.fragment_attendees_custom_list_all, null, true);
         TextView txtName = (TextView) rowView.findViewById(R.id.txtName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
         txtName.setText(AllAttendees[position]);
