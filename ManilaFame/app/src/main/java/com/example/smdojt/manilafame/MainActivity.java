@@ -24,7 +24,7 @@ import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
 import com.example.smdojt.manilafame.Registration_Scanner.QRScanner;
-import com.example.smdojt.manilafame.sql_demo.Main2Activity;
+import com.example.smdojt.manilafame.sql_demo.SQLActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_test_db)
         {
-            Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+            Intent intent = new Intent(getApplicationContext(), SQLActivity.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -1,5 +1,6 @@
 package com.example.smdojt.manilafame.sql_demo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,14 +8,14 @@ import android.widget.EditText;
 
 import com.example.smdojt.manilafame.R;
 
-public class Main2Activity extends AppCompatActivity {
+public class SQLActivity extends AppCompatActivity {
     EditText UsernameEt, PasswordEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.sql_activity);
 
         this.setTitle("MySQLDemo");
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
@@ -31,6 +32,11 @@ public class Main2Activity extends AppCompatActivity {
         String type = "login";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, username, password);
+    }
+
+    public void OpenReg(View view)
+    {
+        startActivity(new Intent(this, SQLRegister.class));
     }
 
 }
