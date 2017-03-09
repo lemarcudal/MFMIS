@@ -34,6 +34,10 @@
                 android:icon="@drawable/ic_camera_alt_black_24dp"
                 android:title="Scan QR Code">
             </item>
+            <item
+                android:id="@+id/nav_test_db"
+                android:icon="@drawable/ic_camera_alt_black_24dp"
+                android:title=" Test SQL"/>
         </menu>
     </item>
     <!-- </group> -->
