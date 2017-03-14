@@ -25,6 +25,7 @@ import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
 import com.example.smdojt.manilafame.Registration_Scanner.QRScanner;
 import com.example.smdojt.manilafame.sql_demo.SQLActivity;
+import com.example.smdojt.manilafame.sql_demo_2.AndroidPHPMySQL;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity
 
     //set font to use for nav drawer
     private void applyFontToMenuItem(MenuItem mi) {
-        Typeface font = Typeface.createFromAsset(getAssets(), "century_gothic_bold.ttf");
+        Typeface font = Typeface.createFromAsset(getAssets(), "open-sans.regular.ttf"); //raleway or opensans or sourcesanspro
         SpannableString mNewTitle = new SpannableString(mi.getTitle());
         mNewTitle.setSpan(new CustomTypefaceSpan("" , font), 0 , mNewTitle.length(),  Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         mi.setTitle(mNewTitle);
@@ -234,6 +235,11 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_test_db)
         {
             Intent intent = new Intent(getApplicationContext(), SQLActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_test_db_2)
+        {
+            Intent intent = new Intent(getApplicationContext(), AndroidPHPMySQL.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
