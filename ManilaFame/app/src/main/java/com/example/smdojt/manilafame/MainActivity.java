@@ -18,6 +18,7 @@ import android.view.SubMenu;
 import android.widget.Toast;
 
 import com.example.smdojt.manilafame.Attendees.AttendeesFragment;
+import com.example.smdojt.manilafame.Buyer_Registration.Buyer_Registration_Activity;
 import com.example.smdojt.manilafame.Calendar.ScheduleFragment;
 import com.example.smdojt.manilafame.Communication.about;
 import com.example.smdojt.manilafame.Communication.contact;
@@ -240,6 +241,11 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_test_db_2)
         {
             Intent intent = new Intent(getApplicationContext(), AndroidPHPMySQL.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.registerBuyer)
+        {
+            Intent intent = new Intent(getApplicationContext(), Buyer_Registration_Activity.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

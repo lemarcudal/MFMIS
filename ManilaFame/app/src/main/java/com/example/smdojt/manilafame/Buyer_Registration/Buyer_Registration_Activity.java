@@ -1,11 +1,14 @@
-package com.example.smdojt.manilafame.sql_demo_2;
+package com.example.smdojt.manilafame.Buyer_Registration;
 
 import android.app.ProgressDialog;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -20,42 +23,56 @@ import com.example.smdojt.manilafame.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AndroidPHPMySQL extends AppCompatActivity implements View.OnClickListener{
+public class Buyer_Registration_Activity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText editTextUsername, editTextPassword, editTextEmail;
+    private EditText editTextCompanyName, editTextDate, editTextLastName, editTextFirstName, editTextMiddleInitial
+            , editTextCity;
+    private RadioButton tradebuyer, nontradebuyer;
+    private Spinner spinnerCountry;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android_phpmy_sql);
+        setContentView(R.layout.activity_buyer_registration);
 
-        this.setTitle("MySQLDemo2");
+        this.setTitle("Buyer Registration");
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextCompanyName = (EditText) findViewById(R.id.editTextEmail);
+        editTextDate = (EditText) findViewById(R.id.editTextUsername);
+        editTextLastName = (EditText) findViewById(R.id.editTextPassword);
+        editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
+        editTextMiddleInitial = (EditText) findViewById(R.id.editTextMiddleInitial);
+        editTextCity = (EditText) findViewById(R.id.editTextCity);
+        tradebuyer = (RadioButton) findViewById(R.id.rButtonTrade);
+        nontradebuyer = (RadioButton) findViewById(R.id.rButtonNonTrade);
+        spinnerCountry = (Spinner) findViewById(R.id.spinnerCountry);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
+
     }
 
     private void registerUser(){
-        final String email = editTextEmail.getText().toString().trim();
-        final String username = editTextUsername.getText().toString().trim();
-        final String password = editTextPassword.getText().toString().trim();
+        final String cname = editTextCompanyName.getText().toString().trim();
+        final String date = editTextDate.getText().toString().trim();
+        final String lname = editTextLastName.getText().toString().trim();
+        final String fname = editTextFirstName.getText().toString().trim();
+        final String mi = editTextMiddleInitial.getText().toString().trim();
+        final String city = editTextCity.getText().toString().trim();
 
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                Constants.URL_REGISTER,
+                com.example.smdojt.manilafame.sql_demo_2.Constants.URL_REGISTER,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {//If there are no ERROR this method will be executed
@@ -79,9 +96,12 @@ public class AndroidPHPMySQL extends AppCompatActivity implements View.OnClickLi
             @Override
             protected Map<String, String> getParams() throws AuthFailureError { //put all parameters that will be sent to hash map
                 Map<String, String> params = new HashMap<>();
-                params.put("username", username); //String is converted to final, because we'are using it in a class; refer to line 48-50
-                params.put("email", email);
-                params.put("password", password);
+                params.put("cname", cname); //String is converted to final, because we'are using it in a class; refer to line 48-50
+                params.put("date", date);
+                params.put("lname", lname);
+                params.put("fname", fname);
+                params.put("mi", mi);
+                params.put("city", city);
                 return params;
             }
         };

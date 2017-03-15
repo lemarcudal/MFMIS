@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/buyer"
+        tools:context="com.example.smdojt.manilafame.Buyer_Registration.Buyer_Registration_Activity">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:id="@+id/linearLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <EditText
+                android:id="@+id/editTextCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:hint="Company Name"
+                android:padding="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:backgroundTint="@color/colorWhite"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:hint="Last Name"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"/>
+
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:hint="First Name"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"/>
+
+                <EditText
+                    android:id="@+id/editTextMiddleInitial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:hint="MI"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/spinnerCountry"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"></Spinner>
+
+                <EditText
+                    android:id="@+id/editTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:hint="City"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Select type of buyer"
+                android:textColor="@color/colorWhite"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buyers">
+                    <RadioButton
+                        android:id="@+id/rButtonTrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.87"
+                        android:buttonTint="@color/colorWhite"
+                        android:text="Trade Buyer"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rButtonNonTrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorWhite"
+                        android:text="Non-Trade Buyer"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15dp" />
+                </RadioGroup>
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/colorWhite"
+                    android:padding="13dp"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="13dp"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:stateListAnimator="@null"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignEnd="@+id/textView7"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
