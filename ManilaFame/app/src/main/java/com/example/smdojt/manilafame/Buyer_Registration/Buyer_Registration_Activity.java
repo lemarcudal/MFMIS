@@ -1,14 +1,12 @@
 package com.example.smdojt.manilafame.Buyer_Registration;
 
 import android.app.ProgressDialog;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -30,34 +28,35 @@ import java.util.Map;
 public class Buyer_Registration_Activity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editTextCompanyName, editTextDate, editTextLastName, editTextFirstName, editTextMiddleInitial
-            , editTextCity;
-    private RadioButton tradebuyer, nontradebuyer;
-    private Spinner spinnerCountry;
+            , editTextCity, editTextCountry, editTextType, editTextEmail;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buyer_registration);
-
         this.setTitle("Buyer Registration");
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
-        editTextCompanyName = (EditText) findViewById(R.id.editTextEmail);
-        editTextDate = (EditText) findViewById(R.id.editTextUsername);
-        editTextLastName = (EditText) findViewById(R.id.editTextPassword);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+
+        editTextCompanyName = (EditText) findViewById(R.id.editTextCompanyName);
+        editTextDate = (EditText) findViewById(R.id.editTextDate);
+        editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextMiddleInitial = (EditText) findViewById(R.id.editTextMiddleInitial);
         editTextCity = (EditText) findViewById(R.id.editTextCity);
-        tradebuyer = (RadioButton) findViewById(R.id.rButtonTrade);
-        nontradebuyer = (RadioButton) findViewById(R.id.rButtonNonTrade);
-        spinnerCountry = (Spinner) findViewById(R.id.spinnerCountry);
+        editTextType = (EditText) findViewById(R.id.editTextType);
+        editTextCountry = (EditText) findViewById(R.id.editTextCountry);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
-
     }
 
     private void registerUser(){
@@ -66,7 +65,10 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         final String lname = editTextLastName.getText().toString().trim();
         final String fname = editTextFirstName.getText().toString().trim();
         final String mi = editTextMiddleInitial.getText().toString().trim();
+        final String email = editTextEmail.getText().toString().trim();
         final String city = editTextCity.getText().toString().trim();
+        final String country = editTextCountry.getText().toString().trim();
+        final String tbuyer = editTextType.getText().toString().trim();
 
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
@@ -101,7 +103,10 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
                 params.put("lname", lname);
                 params.put("fname", fname);
                 params.put("mi", mi);
+                params.put("email", email);
                 params.put("city", city);
+                params.put("country", country);
+                params.put("tbuyer", tbuyer);
                 return params;
             }
         };
