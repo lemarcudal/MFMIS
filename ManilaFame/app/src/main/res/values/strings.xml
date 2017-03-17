@@ -47,4 +47,7 @@
     <string name="about_p2">
         Manila FAME is organized by the Philippine Department of Trade and Industry (DTI), through the Center for International Trade Expositions and Missions (CITEM). It is the second longest-running trade show in the Asia-Pacific, and is the only trade event in the country that is approved by Union des Foires Internationales (UFI), or the Global Association of the Exhibition Industry, a Paris-based association of trade fair organizers founded 90 years ago in Milan, Italy in April 1925.
     </string>
+    <string name="buyer_registration_layout_title">
+        <u>Buyers Registration</u>
+    </string>
 </resources>

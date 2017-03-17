@@ -37,7 +37,7 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buyer_registration);
-        this.setTitle("Buyer Registration");
+        //this.setTitle("Buyer Registration");
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
