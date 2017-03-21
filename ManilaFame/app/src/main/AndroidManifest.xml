@@ -74,15 +74,6 @@
         <activity android:name=".Exhibitor.Exhibitor_Local.TabLoc_CV_Activity" />
         <activity android:name=".Attendees.CustomListVip" />
         <activity
-            android:name=".sql_demo.SQLActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.smdojt.manilafame.MainActivity" />
-        </activity>
-        <activity android:name=".sql_demo.SQLRegister" />
-        <activity
             android:name=".sql_demo_2.AndroidPHPMySQL"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">

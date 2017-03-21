@@ -25,7 +25,6 @@ import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
 import com.example.smdojt.manilafame.Registration_Scanner.QRScanner;
-import com.example.smdojt.manilafame.sql_demo.SQLActivity;
 import com.example.smdojt.manilafame.sql_demo_2.AndroidPHPMySQL;
 
 public class MainActivity extends AppCompatActivity
@@ -231,11 +230,6 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_contact)
         {
             Intent intent = new Intent(getApplicationContext(), contact.class);
-            startActivity(intent);
-        }
-        else if (id == R.id.nav_test_db)
-        {
-            Intent intent = new Intent(getApplicationContext(), SQLActivity.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_test_db_2)

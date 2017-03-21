@@ -35,7 +35,8 @@ public class AndroidPHPMySQL extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_phpmy_sql);
 
-        this.setTitle("MySQLDemo2");Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        this.setTitle("MySQLDemo2");
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
