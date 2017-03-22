@@ -6,7 +6,7 @@ package com.example.smdojt.manilafame.Buyer_Registration;
 
 public class Constants {
 
-    public static final String ROOT_URL = "http://192.168.15.186/Android/v1/";
+    public static final String ROOT_URL = "http://192.168.15.186/ManilaFame/register/";
 
-    public static final String URL_REGISTER = ROOT_URL+"registerUser.php";
+    public static final String URL_REGISTER = ROOT_URL+"registerBuyer.php";
 }

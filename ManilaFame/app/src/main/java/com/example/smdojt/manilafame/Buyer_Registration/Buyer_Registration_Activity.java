@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -21,7 +23,6 @@ import com.example.smdojt.manilafame.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +32,10 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
             , editTextCity, editTextCountry, editTextType, editTextEmail;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
+//    private RadioGroup radioGroup;
+//    private RadioButton r_tb;
+//    private RadioButton r_ntb;
+    String role = "";
 
 
     @Override
@@ -53,10 +58,13 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         editTextType = (EditText) findViewById(R.id.editTextType);
         editTextCountry = (EditText) findViewById(R.id.editTextCountry);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-
+//        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+//        r_ntb = (RadioButton) findViewById(R.id.radio_ntb);
+//        r_tb = (RadioButton) findViewById(R.id.radio_tb);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
+
     }
 
     private void registerUser(){
@@ -69,12 +77,26 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         final String city = editTextCity.getText().toString().trim();
         final String country = editTextCountry.getText().toString().trim();
         final String tbuyer = editTextType.getText().toString().trim();
+        final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        final RadioButton r_tb = (RadioButton) findViewById(R.id.radio_tb);
+        final RadioButton r_ntb = (RadioButton) findViewById(R.id.radio_ntb);
 
+        if (radioGroup.getCheckedRadioButtonId() == r_tb.getId())
+        {
+            String string="Trade Buyer";
+            editTextType.setText(string);
+        }
+        else if (radioGroup.getCheckedRadioButtonId() == r_ntb.getId())
+        {
+            String string="Non-Trade Buyer";
+            editTextType.setText(string);
+
+        }
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                com.example.smdojt.manilafame.sql_demo_2.Constants.URL_REGISTER,
+                com.example.smdojt.manilafame.Buyer_Registration.Constants.URL_REGISTER,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {//If there are no ERROR this method will be executed
@@ -106,7 +128,8 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
                 params.put("email", email);
                 params.put("city", city);
                 params.put("country", country);
-                params.put("tbuyer", tbuyer);
+                params.put("tbuyer", tbuyer); // check code; String created from radio button
+                //params.put("tbuyer", tbuyer);
                 return params;
             }
         };
