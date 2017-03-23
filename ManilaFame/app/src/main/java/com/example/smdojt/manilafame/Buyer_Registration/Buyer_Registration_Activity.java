@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -26,16 +29,18 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Buyer_Registration_Activity extends AppCompatActivity implements View.OnClickListener{
+public class Buyer_Registration_Activity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     private EditText editTextCompanyName, editTextDate, editTextLastName, editTextFirstName, editTextMiddleInitial
-            , editTextCity, editTextCountry, editTextType, editTextEmail;
+            , editTextCity, editTextEmail;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
-//    private RadioGroup radioGroup;
-//    private RadioButton r_tb;
-//    private RadioButton r_ntb;
+    private Spinner spinnerCountry;
     String role = "";
+
+
+    String[] countries={"Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia",
+    "Austria","Azerbaijan"};//Getting the instance of Spinner and applying OnItemSelectedListener on it
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,19 +53,28 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
+
         editTextCompanyName = (EditText) findViewById(R.id.editTextCompanyName);
         editTextDate = (EditText) findViewById(R.id.editTextDate);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextMiddleInitial = (EditText) findViewById(R.id.editTextMiddleInitial);
         editTextCity = (EditText) findViewById(R.id.editTextCity);
-        editTextType = (EditText) findViewById(R.id.editTextType);
-        editTextCountry = (EditText) findViewById(R.id.editTextCountry);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-
+        spinnerCountry = (Spinner) findViewById(R.id.spinnerCountry);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
+
+        //Getting the instance of Spinner and applying OnItemSelectedListener on it
+        spinnerCountry.setOnItemSelectedListener(this);
+        spinnerCountry.setPrompt("Select Country");
+        //Creating the ArrayAdapter instance having the bank name list
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,countries);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //Setting the ArrayAdapter data on the Spinner
+        spinnerCountry.setAdapter(aa);
     }
 
     private void registerUser(){
@@ -71,8 +85,7 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         final String mi = editTextMiddleInitial.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
         final String city = editTextCity.getText().toString().trim();
-        final String country = editTextCountry.getText().toString().trim();
-        final String tbuyer = editTextType.getText().toString().trim();
+        final String country = spinnerCountry.getSelectedItem().toString();
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         final RadioButton r_tb = (RadioButton) findViewById(R.id.radio_tb);
         final RadioButton r_ntb = (RadioButton) findViewById(R.id.radio_ntb);
@@ -138,5 +151,16 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         {
             registerUser();
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+    // TODO Auto-generated method stub
+
     }
 }
