@@ -37,7 +37,6 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
 //    private RadioButton r_ntb;
     String role = "";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,13 +57,10 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         editTextType = (EditText) findViewById(R.id.editTextType);
         editTextCountry = (EditText) findViewById(R.id.editTextCountry);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-//        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-//        r_ntb = (RadioButton) findViewById(R.id.radio_ntb);
-//        r_tb = (RadioButton) findViewById(R.id.radio_tb);
+
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
-
     }
 
     private void registerUser(){
@@ -83,14 +79,11 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
 
         if (radioGroup.getCheckedRadioButtonId() == r_tb.getId())
         {
-            String string="Trade Buyer";
-            editTextType.setText(string);
+            role = "Trade Buyer";
         }
         else if (radioGroup.getCheckedRadioButtonId() == r_ntb.getId())
         {
-            String string="Non-Trade Buyer";
-            editTextType.setText(string);
-
+            role="Non-Trade Buyer";
         }
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
@@ -128,8 +121,8 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
                 params.put("email", email);
                 params.put("city", city);
                 params.put("country", country);
-                params.put("tbuyer", tbuyer); // check code; String created from radio button
-                //params.put("tbuyer", tbuyer);
+                params.put("tbuyer", role); // check code; String created from radio button
+                //first parameter represents the variable from mysql, 2nd param. represents the final variable
                 return params;
             }
         };
