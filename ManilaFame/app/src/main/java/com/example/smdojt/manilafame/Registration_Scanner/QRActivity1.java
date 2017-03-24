@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 
 import com.example.smdojt.manilafame.R;
 import com.google.zxing.Result;
-import me.dm7.barcodescanner.zxing.ZXingScannerView;;
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class QRActivity1 extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
@@ -20,27 +21,28 @@ public class QRActivity1 extends AppCompatActivity implements ZXingScannerView.R
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.qr_activity1);
+        setContentView(R.layout.qr_scanner_activity);
 
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
     }
 
     public void QrScanner(View view){
-
-
         mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
         setContentView(mScannerView);
 
         mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
         mScannerView.startCamera();         // Start camera
-
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mScannerView.stopCamera();           // Stop camera on pause
+        //mScannerView.stopCamera(); // Stop camera on pause ; enabling this line will cause the app to crash; bug
+
     }
 
     @Override
@@ -71,7 +73,7 @@ public class QRActivity1 extends AppCompatActivity implements ZXingScannerView.R
             Intent visitUrl = new Intent(Intent.ACTION_VIEW, Uri.parse(myUrl));
             startActivity(visitUrl);
             mScannerView.stopCamera();
-            setContentView(R.layout.qr_activity1);
+            setContentView(R.layout.qr_scanner_activity);
         }
 
 

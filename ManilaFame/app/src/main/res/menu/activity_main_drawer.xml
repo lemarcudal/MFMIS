@@ -41,6 +41,10 @@
                 android:id="@+id/registerBuyer"
                 android:icon="@drawable/ic_content_copy_black_24dp"
                 android:title="Buyer Registration"/>
+            <item
+                android:id="@+id/registerExhibitor"
+                android:icon="@drawable/ic_content_copy_black_24dp"
+                android:title="Exhibitor Registration"/>
         </menu>
     </item>
     <!-- </group> -->

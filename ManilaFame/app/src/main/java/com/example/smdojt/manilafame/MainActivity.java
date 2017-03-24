@@ -23,8 +23,9 @@ import com.example.smdojt.manilafame.Calendar.ScheduleFragment;
 import com.example.smdojt.manilafame.Communication.about;
 import com.example.smdojt.manilafame.Communication.contact;
 import com.example.smdojt.manilafame.Exhibitor.ExhibitorFragment;
+import com.example.smdojt.manilafame.Exhibitor_Registration.Exhibitor_Registration_Activity;
 import com.example.smdojt.manilafame.ListGalleries.ListGalleryFragment;
-import com.example.smdojt.manilafame.Registration_Scanner.QRScanner;
+import com.example.smdojt.manilafame.Registration_Scanner.QRActivity1;
 import com.example.smdojt.manilafame.sql_demo_2.AndroidPHPMySQL;
 
 public class MainActivity extends AppCompatActivity
@@ -219,7 +220,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_scanner)
         {
-            Intent intent = new Intent(getApplicationContext(), QRScanner.class);
+            Intent intent = new Intent(getApplicationContext(), QRActivity1.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_about)
@@ -240,6 +241,11 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.registerBuyer)
         {
             Intent intent = new Intent(getApplicationContext(), Buyer_Registration_Activity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.registerExhibitor)
+        {
+            Intent intent = new Intent(getApplicationContext(), Exhibitor_Registration_Activity.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
