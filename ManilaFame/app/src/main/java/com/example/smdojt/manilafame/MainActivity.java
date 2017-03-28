@@ -71,32 +71,32 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //------Below are code declaration for setting font in Navigation Drawer
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        Menu m = navigationView.getMenu();
-        for (int i=0;i<m.size();i++) {
-            MenuItem mi = m.getItem(i);
-
-            //for aapplying a font to subMenu ...
-            SubMenu subMenu = mi.getSubMenu();
-            if (subMenu!=null && subMenu.size() >0 ) {
-                for (int j=0; j <subMenu.size();j++) {
-                    MenuItem subMenuItem = subMenu.getItem(j);
-                    applyFontToMenuItem(subMenuItem);
-                }
-            }
-
-            //the method we have create in activity
-            applyFontToMenuItem(mi);
-        }
+//        navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        Menu m = navigationView.getMenu();
+//        for (int i=0;i<m.size();i++) {
+//            MenuItem mi = m.getItem(i);
+//
+//            //for aapplying a font to subMenu ...
+//            SubMenu subMenu = mi.getSubMenu();
+//            if (subMenu!=null && subMenu.size() >0 ) {
+//                for (int j=0; j <subMenu.size();j++) {
+//                    MenuItem subMenuItem = subMenu.getItem(j);
+//                    applyFontToMenuItem(subMenuItem);
+//                }
+//            }
+//
+//            //the method we have create in activity
+//            applyFontToMenuItem(mi);
+//        }
     }
 
     //set font to use for nav drawer
-    private void applyFontToMenuItem(MenuItem mi) {
-        Typeface font = Typeface.createFromAsset(getAssets(), "open-sans.regular.ttf"); //raleway or opensans or sourcesanspro
-        SpannableString mNewTitle = new SpannableString(mi.getTitle());
-        mNewTitle.setSpan(new CustomTypefaceSpan("" , font), 0 , mNewTitle.length(),  Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        mi.setTitle(mNewTitle);
-    }
+//    private void applyFontToMenuItem(MenuItem mi) {
+//        Typeface font = Typeface.createFromAsset(getAssets(), "century_gothic_bold.ttf"); //raleway or opensans or sourcesanspro
+//        SpannableString mNewTitle = new SpannableString(mi.getTitle());
+//        mNewTitle.setSpan(new CustomTypefaceSpan("" , font), 0 , mNewTitle.length(),  Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+//        mi.setTitle(mNewTitle);
+//    }
 
     //default back pressed
     //@Override

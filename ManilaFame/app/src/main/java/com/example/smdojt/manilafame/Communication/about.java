@@ -3,6 +3,7 @@ package com.example.smdojt.manilafame.Communication;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.example.smdojt.manilafame.R;
@@ -15,7 +16,10 @@ public class about extends AppCompatActivity {
         setContentView(R.layout.about);
 
         this.setTitle("About Us? Naging tayo ba?");
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
         TextView txt1 = (TextView) findViewById(R.id.textView1);
         TextView txt2 = (TextView) findViewById(R.id.textView2);

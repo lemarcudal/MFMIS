@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#494949</color>
-    <color name="colorPrimaryDark">#736f6f</color>
+    <color name="colorPrimary">#265a93</color> <!--Action Bar Color-->
+    <color name="colorPrimaryDark">#2058b9</color> <!--Status Bar Color-->
     <color name="colorPrimaryLight">#FFCDD2</color>
-    <color name="colorAccent">#c99d00</color>
-    <color name="colorPrimaryText">#212121</color>
+    <color name="colorAccent">#e11492</color>
+    <color name="colorPrimaryText">#212121</color> <!--Exhibitor sub title-->
     <color name="colorSecondaryText">#727272</color>
     <color name="colorIcons">#FFFFFF</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorDivider">#fff0ba</color>
+    <color name="colorDivider">#ececec</color> <!--Nav Drawer Color (Overview, REgister, Communicate)-->
 
 </resources>

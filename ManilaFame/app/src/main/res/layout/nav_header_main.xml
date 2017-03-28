@@ -2,9 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="190dp"
-    android:background="@drawable/background_material_gray"
+    android:background="@drawable/background_material3"
     android:orientation="vertical">
-
     <ImageView
 
         android:id="@+id/profile_image"

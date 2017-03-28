@@ -39,7 +39,7 @@ public class AndroidPHPMySQL extends AppCompatActivity implements View.OnClickLi
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
 
         //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 

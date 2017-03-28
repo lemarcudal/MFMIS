@@ -1,6 +1,7 @@
 package com.example.smdojt.manilafame.Buyer_Registration;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -46,12 +47,12 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buyer_registration);
-        //this.setTitle("Buyer Registration");
+        //this.setTitle("Registration");
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
 
 
         editTextCompanyName = (EditText) findViewById(R.id.editTextCompanyName);
@@ -70,7 +71,7 @@ public class Buyer_Registration_Activity extends AppCompatActivity implements Vi
         spinnerCountry.setOnItemSelectedListener(this);
         spinnerCountry.setPrompt("Select Country");
         //Creating the ArrayAdapter instance having the bank name list
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,countries);
+        ArrayAdapter<String> aa = new ArrayAdapter<String>(this,R.layout.spinner_style,countries);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         //Setting the ArrayAdapter data on the Spinner
