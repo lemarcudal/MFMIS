@@ -31,8 +31,6 @@ public class Exhibitor_Registration_Activity extends AppCompatActivity implement
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exhibitor_registration_);
 
-        this.setTitle("Buyer Registration");
-
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

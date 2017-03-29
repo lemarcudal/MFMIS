@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="REGISTER HERE"
                 android:textSize="15dp"
-                android:id="@+id/registerHere"
+                android:id="@+id/title2"
                 android:layout_gravity="center"
                 android:textColor="#204750"
                 android:layout_marginTop="20dp"/>

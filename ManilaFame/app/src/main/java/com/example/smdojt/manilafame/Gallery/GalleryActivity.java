@@ -31,14 +31,14 @@ public class GalleryActivity extends Fragment {
     ArrayList<ImageModel> data = new ArrayList<>();
 
     public static String IMGS[] = {
-            "http://www.manilafame.com/en/images/gallery/springforward/01.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/02.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/03.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/04.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/05.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/06.jpg",
-            "http://www.manilafame.com/en/images/gallery/springforward/07.jpg",
-            "http://cms.interaksyon.com/lifestyle/assets/2014/02/PCM_9925-2.jpg"
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//06.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//05.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//04.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//03.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//02.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/opening-ceremony//01.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/katha-awards//10.jpg",
+            "http://www.manilafame.com/website-assets/img/media/photos/2016/october/katha-awards//09.jpg"
     };
 
 

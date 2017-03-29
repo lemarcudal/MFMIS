@@ -11,23 +11,43 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:paddingTop="25dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout3">
 
-        <Button android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="QR Scanner"
-            android:onClick="QrScanner"
-            android:id="@+id/button2"
+        <ImageView
+            android:id="@+id/register_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/qrscanner"
             android:layout_gravity="center"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="158dp" />
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#204750"
+        android:stateListAnimator="@null"
+        android:text="QR SCANNER"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp" />
 
 
 </RelativeLayout>

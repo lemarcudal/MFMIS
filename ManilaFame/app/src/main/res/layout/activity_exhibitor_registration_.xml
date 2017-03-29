@@ -6,12 +6,13 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/exhibitor_01"
     tools:context="com.example.smdojt.manilafame.Buyer_Registration.Buyer_Registration_Activity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/transparent"
         android:elevation="4dp"
         android:paddingTop="25dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -22,30 +23,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="180dp">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXHIBITOR APPLICATION"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Application Kit"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
 
             <Button
                 android:id="@+id/DownloadMusic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Music Download" />
+                android:text="Participation and Acceptance Procedure"
+                android:textSize="13dp"
+                android:backgroundTint="#204750"
+                android:textColor="@color/colorWhite"
+                android:stateListAnimator="@null"/>
 
             <Button
                 android:id="@+id/DownloadImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Image Download" />
+                android:text="Summary Participation Details"
+                android:backgroundTint="#204750"
+                android:textColor="@color/colorWhite"
+                android:stateListAnimator="@null"/>
 
             <Button
                 android:id="@+id/DownloadStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check Status of Downloads" />
+                android:text="Check Status of Downloads"
+                android:backgroundTint="#204750"
+                android:textColor="@color/colorWhite"
+                android:stateListAnimator="@null"
+                android:visibility="invisible"/>
 
             <Button
                 android:id="@+id/CancelDownload"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cancel All Downloads" />
+                android:text="Cancel All Downloads"
+                android:backgroundTint="#204750"
+                android:textColor="@color/colorWhite"
+                android:stateListAnimator="@null"
+                android:visibility="invisible"/>
         </LinearLayout>
 </RelativeLayout>
