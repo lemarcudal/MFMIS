@@ -226,11 +226,12 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:textSize="14dp"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:backgroundTint="#204750"
                 android:textColor="@color/colorWhite"
                 android:stateListAnimator="@null"
                 android:layout_below="@+id/linearLayout"
                 android:layout_alignEnd="@+id/textView7"/>
+
         </LinearLayout>
 
 </RelativeLayout>

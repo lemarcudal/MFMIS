@@ -8,34 +8,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="text_with_paragraphs">
-        Can this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errors
-        Can this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errorsCan this contain a lot of text? Can it contain \n a newline? Yes it can.
-        Adding a 2nd line like this should work.
-        It should not cause parsing errors
-    </string>
     <string name="citem_address">
         Golden Shell Pavilion, ITC Complex,
         Roxas Boulevard corner Sen. Gil J. Puyat Avenue,
@@ -51,4 +23,5 @@
         <u>Buyers Registration</u>
     </string>
     <string name="spinner_title">Select Country</string>
+    <string name="new_ed">The Center for International Trade Expositions and Missions’ <b>new Executive Director Clayton Tugonon</b>  aims to promote the Philippines as a key sourcing destination for premium food, lifestyle, fashion, and indigenous products, and to support local small-scale businesses to achieve export-level capability and readiness.</string>
 </resources>

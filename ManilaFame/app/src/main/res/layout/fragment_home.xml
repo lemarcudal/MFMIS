@@ -11,25 +11,202 @@
         android:layout_height="match_parent"
         tools:context="com.example.guitarista.citem.MainFragment">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_with_paragraphs"
-            android:id="@+id/textView"
-            android:gravity="center"
-            android:layout_marginTop="224dp"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_alignStart="@+id/imageView"
-            android:layout_alignEnd="@+id/imageView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="250dp"
-            android:src="@drawable/mf_01"
-            android:id="@+id/imageView"
-            android:layout_marginTop="31dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/manilafame_wdcmmlogo_mobile"
+                android:id="@+id/mf_wdcmmlogo_mobile"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017 Manila Fame Projects"
+                android:textSize="15dp"
+                android:id="@+id/title1"
+                android:layout_gravity="center"
+                android:textColor="#204750"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REGISTER HERE"
+                android:textSize="15dp"
+                android:id="@+id/registerHere"
+                android:layout_gravity="center"
+                android:textColor="#204750"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/forExhibitors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For Exhibitors"
+                    android:textSize="11dp"
+                    android:stateListAnimator="@null"
+                    android:backgroundTint="#204750"
+                    android:textColor="@color/colorWhite"/>
+
+                <Button
+                    android:id="@+id/forBuyers"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/forExhibitors"
+                    android:text="For Buyers"
+                    android:textSize="11dp"
+                    android:stateListAnimator="@null"
+                    android:backgroundTint="#204750"
+                    android:textColor="@color/colorWhite"/>
+
+                <Button
+                    android:id="@+id/forPress"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/forExhibitors"
+                    android:text="For Press"
+                    android:textSize="11dp"
+                    android:stateListAnimator="@null"
+                    android:backgroundTint="#204750"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="340dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/about_p1"
+                    android:textSize="12dp"
+                    android:id="@+id/about_p1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="340dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view1"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/about_p2"
+                    android:textSize="12dp"
+                    android:id="@+id/about_p2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="340dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view2"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="330dp"
+                        android:layout_height="330dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#204750"
+                        android:id="@+id/view3"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ed_ct"
+                        android:id="@+id/ed"
+                        android:layout_alignTop="@id/view3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11dp"/>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/new_ed"
+                        android:textSize="12dp"
+                        android:id="@+id/new_ed"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="230dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="340dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view4"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
     </RelativeLayout>
-
 </ScrollView>
