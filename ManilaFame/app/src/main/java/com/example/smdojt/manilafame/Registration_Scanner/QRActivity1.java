@@ -26,7 +26,7 @@ public class QRActivity1 extends AppCompatActivity implements ZXingScannerView.R
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
     }
 

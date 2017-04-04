@@ -43,6 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:onClick="QrScanner"
         android:backgroundTint="#204750"
         android:stateListAnimator="@null"
         android:text="QR SCANNER"
