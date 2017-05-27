@@ -51,4 +51,5 @@ Developed using Android Studio 2.2.3. Other details below:
         testCompile 'junit:junit:4.12'
     }
 
-Above are the versions needed for the app to work properly.
+Above are the versions needed for the app to properly. For the database part of the app, you will need to pull my php and mysql files in my other repositories.
+
